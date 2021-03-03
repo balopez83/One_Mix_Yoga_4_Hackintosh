@@ -11,9 +11,8 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 ## One Mix Yoga 4 Specifications:
 
-|   | Standard | Platinum |
+| Model: | Black | Platinum |
 |---|----------|----------|
-|Color| Black | Grey |
 |CPU| i5-1130G7 quad core 1.1-4 Ghz| i7-1160G7 quad core 1.2-4.4 Ghz|
 |GPU| Xe 80 EU | Xe 96 EU |
 |RAM| 8/16 GB | 16 GB |
