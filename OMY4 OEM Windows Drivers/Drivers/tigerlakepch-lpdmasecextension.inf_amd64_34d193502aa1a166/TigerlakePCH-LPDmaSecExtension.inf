@@ -1,0 +1,487 @@
+; ************************************************************
+; ************************************************************
+; **  Filename: TigerlakePCH-LPDmaSecExtension.inf          **
+; **  Abstract: Adds devices in registry as AllowedBus      **
+; **            for BitLocker device encryption support     ** 
+; ************************************************************
+; ************************************************************
+
+[Version]
+Signature=$WINDOWS NT$
+Class=Extension
+ClassGUID={E2F84CE7-8EFA-411C-AA69-97454CA4CB57}
+Provider=%INTEL%
+CatalogFile=TigerlakePCH-LPDmaSec.cat
+DriverVer=07/18/1968, 10.1.24.5
+PnpLockDown=1
+ExtensionId={ec1f097b-60a1-4803-81ba-0625dfd4254d}
+
+[Manufacturer]
+%INTEL%=INTEL,NTx86,NTamd64
+
+[INTEL.NTx86]
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A080_Install,PCI\VEN_8086&DEV_A080
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A081_Install,PCI\VEN_8086&DEV_A081
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A082_Install,PCI\VEN_8086&DEV_A082
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A083_Install,PCI\VEN_8086&DEV_A083
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A084_Install,PCI\VEN_8086&DEV_A084
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A085_Install,PCI\VEN_8086&DEV_A085
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A086_Install,PCI\VEN_8086&DEV_A086
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A087_Install,PCI\VEN_8086&DEV_A087
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A088_Install,PCI\VEN_8086&DEV_A088
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A089_Install,PCI\VEN_8086&DEV_A089
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A08A_Install,PCI\VEN_8086&DEV_A08A
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A08B_Install,PCI\VEN_8086&DEV_A08B
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A08C_Install,PCI\VEN_8086&DEV_A08C
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A08D_Install,PCI\VEN_8086&DEV_A08D
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A08E_Install,PCI\VEN_8086&DEV_A08E
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A08F_Install,PCI\VEN_8086&DEV_A08F
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A090_Install,PCI\VEN_8086&DEV_A090
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A091_Install,PCI\VEN_8086&DEV_A091
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A092_Install,PCI\VEN_8086&DEV_A092
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A093_Install,PCI\VEN_8086&DEV_A093
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A094_Install,PCI\VEN_8086&DEV_A094
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A095_Install,PCI\VEN_8086&DEV_A095
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A096_Install,PCI\VEN_8086&DEV_A096
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A097_Install,PCI\VEN_8086&DEV_A097
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A098_Install,PCI\VEN_8086&DEV_A098
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A099_Install,PCI\VEN_8086&DEV_A099
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A09A_Install,PCI\VEN_8086&DEV_A09A
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A09B_Install,PCI\VEN_8086&DEV_A09B
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A09C_Install,PCI\VEN_8086&DEV_A09C
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A09D_Install,PCI\VEN_8086&DEV_A09D
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A09E_Install,PCI\VEN_8086&DEV_A09E
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A09F_Install,PCI\VEN_8086&DEV_A09F
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B0_Install,PCI\VEN_8086&DEV_A0B0
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B1_Install,PCI\VEN_8086&DEV_A0B1
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B2_Install,PCI\VEN_8086&DEV_A0B2
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B3_Install,PCI\VEN_8086&DEV_A0B3
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B4_Install,PCI\VEN_8086&DEV_A0B4
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B5_Install,PCI\VEN_8086&DEV_A0B5
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B6_Install,PCI\VEN_8086&DEV_A0B6
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B7_Install,PCI\VEN_8086&DEV_A0B7
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B8_Install,PCI\VEN_8086&DEV_A0B8
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B9_Install,PCI\VEN_8086&DEV_A0B9
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0BA_Install,PCI\VEN_8086&DEV_A0BA
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0BB_Install,PCI\VEN_8086&DEV_A0BB
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0BC_Install,PCI\VEN_8086&DEV_A0BC
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0BD_Install,PCI\VEN_8086&DEV_A0BD
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0BE_Install,PCI\VEN_8086&DEV_A0BE
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0BF_Install,PCI\VEN_8086&DEV_A0BF
+
+[INTEL.NTamd64]
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A080_Install,PCI\VEN_8086&DEV_A080
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A081_Install,PCI\VEN_8086&DEV_A081
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A082_Install,PCI\VEN_8086&DEV_A082
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A083_Install,PCI\VEN_8086&DEV_A083
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A084_Install,PCI\VEN_8086&DEV_A084
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A085_Install,PCI\VEN_8086&DEV_A085
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A086_Install,PCI\VEN_8086&DEV_A086
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A087_Install,PCI\VEN_8086&DEV_A087
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A088_Install,PCI\VEN_8086&DEV_A088
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A089_Install,PCI\VEN_8086&DEV_A089
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A08A_Install,PCI\VEN_8086&DEV_A08A
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A08B_Install,PCI\VEN_8086&DEV_A08B
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A08C_Install,PCI\VEN_8086&DEV_A08C
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A08D_Install,PCI\VEN_8086&DEV_A08D
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A08E_Install,PCI\VEN_8086&DEV_A08E
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A08F_Install,PCI\VEN_8086&DEV_A08F
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A090_Install,PCI\VEN_8086&DEV_A090
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A091_Install,PCI\VEN_8086&DEV_A091
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A092_Install,PCI\VEN_8086&DEV_A092
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A093_Install,PCI\VEN_8086&DEV_A093
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A094_Install,PCI\VEN_8086&DEV_A094
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A095_Install,PCI\VEN_8086&DEV_A095
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A096_Install,PCI\VEN_8086&DEV_A096
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A097_Install,PCI\VEN_8086&DEV_A097
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A098_Install,PCI\VEN_8086&DEV_A098
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A099_Install,PCI\VEN_8086&DEV_A099
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A09A_Install,PCI\VEN_8086&DEV_A09A
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A09B_Install,PCI\VEN_8086&DEV_A09B
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A09C_Install,PCI\VEN_8086&DEV_A09C
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A09D_Install,PCI\VEN_8086&DEV_A09D
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A09E_Install,PCI\VEN_8086&DEV_A09E
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A09F_Install,PCI\VEN_8086&DEV_A09F
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B0_Install,PCI\VEN_8086&DEV_A0B0
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B1_Install,PCI\VEN_8086&DEV_A0B1
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B2_Install,PCI\VEN_8086&DEV_A0B2
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B3_Install,PCI\VEN_8086&DEV_A0B3
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B4_Install,PCI\VEN_8086&DEV_A0B4
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B5_Install,PCI\VEN_8086&DEV_A0B5
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B6_Install,PCI\VEN_8086&DEV_A0B6
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B7_Install,PCI\VEN_8086&DEV_A0B7
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B8_Install,PCI\VEN_8086&DEV_A0B8
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0B9_Install,PCI\VEN_8086&DEV_A0B9
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0BA_Install,PCI\VEN_8086&DEV_A0BA
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0BB_Install,PCI\VEN_8086&DEV_A0BB
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0BC_Install,PCI\VEN_8086&DEV_A0BC
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0BD_Install,PCI\VEN_8086&DEV_A0BD
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0BE_Install,PCI\VEN_8086&DEV_A0BE
+%DmaSecExtension%=DmaSecPCI\VEN_8086&DEV_A0BF_Install,PCI\VEN_8086&DEV_A0BF
+
+[DmaSecPCI\VEN_8086&DEV_A080_Install]
+[DmaSecPCI\VEN_8086&DEV_A080_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A080_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A080_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller - A080,0,PCI\VEN_8086&DEV_A080
+
+[DmaSecPCI\VEN_8086&DEV_A081_Install]
+[DmaSecPCI\VEN_8086&DEV_A081_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A081_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A081_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller (U SuperSKU) - A081,0,PCI\VEN_8086&DEV_A081
+
+[DmaSecPCI\VEN_8086&DEV_A082_Install]
+[DmaSecPCI\VEN_8086&DEV_A082_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A082_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A082_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller (U Premium) - A082,0,PCI\VEN_8086&DEV_A082
+
+[DmaSecPCI\VEN_8086&DEV_A083_Install]
+[DmaSecPCI\VEN_8086&DEV_A083_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A083_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A083_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller (U Base) - A083,0,PCI\VEN_8086&DEV_A083
+
+[DmaSecPCI\VEN_8086&DEV_A084_Install]
+[DmaSecPCI\VEN_8086&DEV_A084_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A084_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A084_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A084,0,PCI\VEN_8086&DEV_A084
+
+[DmaSecPCI\VEN_8086&DEV_A085_Install]
+[DmaSecPCI\VEN_8086&DEV_A085_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A085_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A085_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A085,0,PCI\VEN_8086&DEV_A085
+
+[DmaSecPCI\VEN_8086&DEV_A086_Install]
+[DmaSecPCI\VEN_8086&DEV_A086_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A086_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A086_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller (Y SuperSKU) - A086,0,PCI\VEN_8086&DEV_A086
+
+[DmaSecPCI\VEN_8086&DEV_A087_Install]
+[DmaSecPCI\VEN_8086&DEV_A087_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A087_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A087_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller (Y Premium) - A087,0,PCI\VEN_8086&DEV_A087
+
+[DmaSecPCI\VEN_8086&DEV_A088_Install]
+[DmaSecPCI\VEN_8086&DEV_A088_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A088_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A088_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A088,0,PCI\VEN_8086&DEV_A088
+
+[DmaSecPCI\VEN_8086&DEV_A089_Install]
+[DmaSecPCI\VEN_8086&DEV_A089_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A089_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A089_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A089,0,PCI\VEN_8086&DEV_A089
+
+[DmaSecPCI\VEN_8086&DEV_A08A_Install]
+[DmaSecPCI\VEN_8086&DEV_A08A_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A08A_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A08A_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A08A,0,PCI\VEN_8086&DEV_A08A
+
+[DmaSecPCI\VEN_8086&DEV_A08B_Install]
+[DmaSecPCI\VEN_8086&DEV_A08B_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A08B_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A08B_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A08B,0,PCI\VEN_8086&DEV_A08B
+
+[DmaSecPCI\VEN_8086&DEV_A08C_Install]
+[DmaSecPCI\VEN_8086&DEV_A08C_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A08C_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A08C_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A08C,0,PCI\VEN_8086&DEV_A08C
+
+[DmaSecPCI\VEN_8086&DEV_A08D_Install]
+[DmaSecPCI\VEN_8086&DEV_A08D_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A08D_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A08D_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A08D,0,PCI\VEN_8086&DEV_A08D
+
+[DmaSecPCI\VEN_8086&DEV_A08E_Install]
+[DmaSecPCI\VEN_8086&DEV_A08E_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A08E_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A08E_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A08E,0,PCI\VEN_8086&DEV_A08E
+
+[DmaSecPCI\VEN_8086&DEV_A08F_Install]
+[DmaSecPCI\VEN_8086&DEV_A08F_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A08F_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A08F_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A08F,0,PCI\VEN_8086&DEV_A08F
+
+[DmaSecPCI\VEN_8086&DEV_A090_Install]
+[DmaSecPCI\VEN_8086&DEV_A090_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A090_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A090_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A090,0,PCI\VEN_8086&DEV_A090
+
+[DmaSecPCI\VEN_8086&DEV_A091_Install]
+[DmaSecPCI\VEN_8086&DEV_A091_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A091_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A091_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A091,0,PCI\VEN_8086&DEV_A091
+
+[DmaSecPCI\VEN_8086&DEV_A092_Install]
+[DmaSecPCI\VEN_8086&DEV_A092_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A092_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A092_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A092,0,PCI\VEN_8086&DEV_A092
+
+[DmaSecPCI\VEN_8086&DEV_A093_Install]
+[DmaSecPCI\VEN_8086&DEV_A093_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A093_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A093_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A093,0,PCI\VEN_8086&DEV_A093
+
+[DmaSecPCI\VEN_8086&DEV_A094_Install]
+[DmaSecPCI\VEN_8086&DEV_A094_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A094_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A094_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A094,0,PCI\VEN_8086&DEV_A094
+
+[DmaSecPCI\VEN_8086&DEV_A095_Install]
+[DmaSecPCI\VEN_8086&DEV_A095_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A095_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A095_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A095,0,PCI\VEN_8086&DEV_A095
+
+[DmaSecPCI\VEN_8086&DEV_A096_Install]
+[DmaSecPCI\VEN_8086&DEV_A096_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A096_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A096_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A096,0,PCI\VEN_8086&DEV_A096
+
+[DmaSecPCI\VEN_8086&DEV_A097_Install]
+[DmaSecPCI\VEN_8086&DEV_A097_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A097_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A097_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A097,0,PCI\VEN_8086&DEV_A097
+
+[DmaSecPCI\VEN_8086&DEV_A098_Install]
+[DmaSecPCI\VEN_8086&DEV_A098_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A098_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A098_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A098,0,PCI\VEN_8086&DEV_A098
+
+[DmaSecPCI\VEN_8086&DEV_A099_Install]
+[DmaSecPCI\VEN_8086&DEV_A099_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A099_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A099_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A099,0,PCI\VEN_8086&DEV_A099
+
+[DmaSecPCI\VEN_8086&DEV_A09A_Install]
+[DmaSecPCI\VEN_8086&DEV_A09A_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A09A_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A09A_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A09A,0,PCI\VEN_8086&DEV_A09A
+
+[DmaSecPCI\VEN_8086&DEV_A09B_Install]
+[DmaSecPCI\VEN_8086&DEV_A09B_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A09B_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A09B_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A09B,0,PCI\VEN_8086&DEV_A09B
+
+[DmaSecPCI\VEN_8086&DEV_A09C_Install]
+[DmaSecPCI\VEN_8086&DEV_A09C_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A09C_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A09C_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A09C,0,PCI\VEN_8086&DEV_A09C
+
+[DmaSecPCI\VEN_8086&DEV_A09D_Install]
+[DmaSecPCI\VEN_8086&DEV_A09D_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A09D_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A09D_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A09D,0,PCI\VEN_8086&DEV_A09D
+
+[DmaSecPCI\VEN_8086&DEV_A09E_Install]
+[DmaSecPCI\VEN_8086&DEV_A09E_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A09E_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A09E_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A09E,0,PCI\VEN_8086&DEV_A09E
+
+[DmaSecPCI\VEN_8086&DEV_A09F_Install]
+[DmaSecPCI\VEN_8086&DEV_A09F_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A09F_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A09F_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) LPC Controller/eSPI Controller - A09F,0,PCI\VEN_8086&DEV_A09F
+
+[DmaSecPCI\VEN_8086&DEV_A0B0_Install]
+[DmaSecPCI\VEN_8086&DEV_A0B0_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0B0_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0B0_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #9 - A0B0,0,PCI\VEN_8086&DEV_A0B0
+
+[DmaSecPCI\VEN_8086&DEV_A0B1_Install]
+[DmaSecPCI\VEN_8086&DEV_A0B1_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0B1_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0B1_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #10 - A0B1,0,PCI\VEN_8086&DEV_A0B1
+
+[DmaSecPCI\VEN_8086&DEV_A0B2_Install]
+[DmaSecPCI\VEN_8086&DEV_A0B2_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0B2_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0B2_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #11 - A0B2,0,PCI\VEN_8086&DEV_A0B2
+
+[DmaSecPCI\VEN_8086&DEV_A0B3_Install]
+[DmaSecPCI\VEN_8086&DEV_A0B3_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0B3_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0B3_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #12 - A0B3,0,PCI\VEN_8086&DEV_A0B3
+
+[DmaSecPCI\VEN_8086&DEV_A0B4_Install]
+[DmaSecPCI\VEN_8086&DEV_A0B4_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0B4_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0B4_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #13 - A0B4,0,PCI\VEN_8086&DEV_A0B4
+
+[DmaSecPCI\VEN_8086&DEV_A0B5_Install]
+[DmaSecPCI\VEN_8086&DEV_A0B5_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0B5_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0B5_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #14 - A0B5,0,PCI\VEN_8086&DEV_A0B5
+
+[DmaSecPCI\VEN_8086&DEV_A0B6_Install]
+[DmaSecPCI\VEN_8086&DEV_A0B6_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0B6_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0B6_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #15 - A0B6,0,PCI\VEN_8086&DEV_A0B6
+
+[DmaSecPCI\VEN_8086&DEV_A0B7_Install]
+[DmaSecPCI\VEN_8086&DEV_A0B7_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0B7_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0B7_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #16 - A0B7,0,PCI\VEN_8086&DEV_A0B7
+
+[DmaSecPCI\VEN_8086&DEV_A0B8_Install]
+[DmaSecPCI\VEN_8086&DEV_A0B8_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0B8_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0B8_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #1 - A0B8,0,PCI\VEN_8086&DEV_A0B8
+
+[DmaSecPCI\VEN_8086&DEV_A0B9_Install]
+[DmaSecPCI\VEN_8086&DEV_A0B9_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0B9_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0B9_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #2 - A0B9,0,PCI\VEN_8086&DEV_A0B9
+
+[DmaSecPCI\VEN_8086&DEV_A0BA_Install]
+[DmaSecPCI\VEN_8086&DEV_A0BA_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0BA_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0BA_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #3 - A0BA,0,PCI\VEN_8086&DEV_A0BA
+
+[DmaSecPCI\VEN_8086&DEV_A0BB_Install]
+[DmaSecPCI\VEN_8086&DEV_A0BB_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0BB_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0BB_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #4 - A0BB,0,PCI\VEN_8086&DEV_A0BB
+
+[DmaSecPCI\VEN_8086&DEV_A0BC_Install]
+[DmaSecPCI\VEN_8086&DEV_A0BC_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0BC_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0BC_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #5 - A0BC,0,PCI\VEN_8086&DEV_A0BC
+
+[DmaSecPCI\VEN_8086&DEV_A0BD_Install]
+[DmaSecPCI\VEN_8086&DEV_A0BD_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0BD_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0BD_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #6 - A0BD,0,PCI\VEN_8086&DEV_A0BD
+
+[DmaSecPCI\VEN_8086&DEV_A0BE_Install]
+[DmaSecPCI\VEN_8086&DEV_A0BE_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0BE_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0BE_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #7 - A0BE,0,PCI\VEN_8086&DEV_A0BE
+
+[DmaSecPCI\VEN_8086&DEV_A0BF_Install]
+[DmaSecPCI\VEN_8086&DEV_A0BF_Install.HW]
+AddReg=DmaSecPCI\VEN_8086&DEV_A0BF_AddReg
+
+[DmaSecPCI\VEN_8086&DEV_A0BF_AddReg]
+HKLM,SYSTEM\CurrentControlSet\Control\DmaSecurity\AllowedBuses,Intel(R) PCI Express Root Port #8 - A0BF,0,PCI\VEN_8086&DEV_A0BF
+
+[Strings]
+INTEL="INTEL"
+DmaSecExtension=DmaSecurity AllowedBus Extension
+
+
+
+
+; Copyright (c) 2003-2019 Intel Corporation
+; 
+; ********************************************************************************
+; Intel is making no claims of usability, efficacy or warranty.
+; ********************************************************************************
+; Information in this document is provided in connection with Intel products. No
+; license, express or implied, by estoppel or otherwise, to any intellectual
+; property rights is granted by this document. Intel assumes no liability
+; whatsoever, and Intel disclaims any express or implied warranty, relating to
+; sale and/or use of Intel products including liability or warranties relating to
+; fitness for a particular purpose, merchantability, or infringement of any
+; patent, copyright or other intellectual property right. Intel products are not
+; intended for use in medical, life saving, or life sustaining applications.
+; ********************************************************************************
+; Intel Corporation disclaims all warranties and liabilities for the use of this
+; document and the information contained herein, and assumes no responsibility for
+; any errors which may appear in this document, nor does Intel make a commitment
+; to update the information contained herein. Intel reserves the right to make
+; changes to this document at any time, without notice.
+; ********************************************************************************
+; ********************************************************************************
+; 
+; * Third-party brands and names are the property of their respective owners.

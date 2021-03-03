@@ -1,0 +1,282 @@
+;/****************************************************************************
+; *                           INTEL CONFIDENTIAL                             *
+; *                  Copyright 2018-2019 Intel Corporation.                  *
+; *                                                                          *
+; *  This  software  and  the  related  documents   are  Intel  copyrighted  *
+; *  materials,  and your  use of them  is governed by the express  license  *
+; *  under which they were provided  to you  (License).  Unless the License  *
+; *  provides otherwise, you may not use, modify, copy, publish, distribute, *
+; *  disclose or transmit  this software  or the related  documents without  *
+; *  Intel's prior written permission.                                       *
+; *                                                                          *
+; *  This software and  the related documents are  provided as is,  with no  *
+; *  express  or implied  warranties,  other than those that  are expressly  *
+; *  stated in the License.                                                  *
+; ****************************************************************************/
+;
+;
+; File Name: iclsClient.inf
+; Install information file for UWD iCLS Client
+;--------- Version Section ---------------------------------------------------
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=SoftwareComponent 
+ClassGuid={5c4c3332-344d-483c-8739-259e934c9cc8}
+Provider=%ManufacturerName%
+CatalogFile=iclsClient.cat
+PnpLockDown=1
+DriverVer = 04/09/2020,1.61.251.0
+
+[SourceDisksNames]
+1 = %Location%
+
+[SourceDisksFiles.x86]
+iclsClient.dll                    = 1,lib32
+iclsClientInternal.dll            = 1,lib32
+iclsProxy.dll                     = 1,lib32
+iclsProxyInternal.dll             = 1,lib32
+IntelPTTEKRecertification.exe     = 1,lib32
+libcrypto-1_1.dll                 = 1,lib32
+SocketHeciServer.exe              = 1,lib32
+libssl-1_1.dll                    = 1,lib32
+TPMProvisioningService.exe        = 1,lib32
+msvcp140.dll                      = 1,lib32
+vcruntime140.dll                  = 1,lib32
+
+[SourceDisksFiles.amd64]
+iclsClient.dll                    = 1,lib
+iclsClientInternal.dll            = 1,lib
+iclsProxy.dll                     = 1,lib
+iclsProxyInternal.dll             = 1,lib
+IntelPTTEKRecertification.exe     = 1,lib
+libcrypto-1_1-x64.dll             = 1,lib
+SocketHeciServer.exe              = 1,lib
+libssl-1_1-x64.dll                = 1,lib
+TPMProvisioningService.exe        = 1,lib
+msvcp140.dll                      = 1,lib
+vcruntime140.dll                  = 1,lib
+
+[SourceDisksFiles]
+development_tools.txt             = 1,Documents
+License.txt                       = 1,Documents
+Readme.txt                        = 1,Documents
+redist.txt                        = 1,Documents
+Third Party Licenses.txt          = 1,Documents
+
+cacert.pem                        = 1,conf
+epid2_paramcert.dat               = 1,conf
+EPIDGroupCertLegacy.cer           = 1,conf
+EPIDGroupCertX509.cer             = 1,conf
+epid_paramcert.dat                = 1,conf
+iclsProxy.conf                    = 1,conf
+
+[DestinationDirs]
+iclsDir86	                      = 13,lib32    ; x32 on x32 OS
+iclsDir64	                      = 13,lib      ; x64 on x64 OS
+confDir   	                      = 13,conf
+docsDir   	                      = 13,Documents
+
+;--------- Manufacturer and Models Sections ----------------------------------
+
+[Manufacturer]
+%ManufacturerName%=Intel, NTx86.10.0, NTamd64.10.0
+
+[Intel.NTx86.10.0]
+%Location% = IclsClientInstallSection.NTx86, SWC\PROVIDER_INTEL_COMPONENT_ICLSCLIENT
+
+[Intel.NTamd64.10.0]
+%Location% = IclsClientInstallSection.NTamd64, SWC\PROVIDER_INTEL_COMPONENT_ICLSCLIENT
+
+[IclsClientInstallSection.NTx86]
+CopyFiles = iclsDir86,confDir,docsDir
+AddReg = IclsClientSoftwareReg86
+AddReg = Autologgers
+
+[IclsClientInstallSection.NTamd64]
+CopyFiles = iclsDir64,confDir,docsDir
+AddReg = IclsClientSoftwareReg64
+AddReg = Autologgers
+
+;---- Registry HKLM\SYSTEM\CurrentControlSet\Control\Class\{5c4c3332-344d-483c-8739-259e934c9cc8}\0000\iCLS Client ----
+
+[IclsClientSoftwareReg64]
+HKR, "iCLS Client", "InstallDir64",%REG_SZ%,%13%\lib
+HKR, "iCLS Client", "API_Version",%REG_DWORD%,1
+HKR, "iCLS Client", "buildNumber",%REG_SZ%,%iCLSVersion%
+HKR, "iCLS Client\HeciServer", "SocketServiceName", %REG_SZ%, %SocketHECIServiceName%
+
+[IclsClientSoftwareReg86]
+HKR, "iCLS Client", "InstallDir32",%REG_SZ%,%13%\lib32
+HKR, "iCLS Client", "API_Version",%REG_DWORD%,1
+HKR, "iCLS Client", "buildNumber",%REG_SZ%,%iCLSVersion%
+HKR, "iCLS Client\HeciServer", "SocketServiceName", %REG_SZ%, %SocketHECIServiceName%
+
+[Autologgers]
+HKLM,%ETWRegistryPath%\%ETWIclsClientRegistryKey%, "Start",%REG_DWORD%,1
+HKLM,%ETWRegistryPath%\%ETWIclsClientRegistryKey%, "LogFileMode",%REG_DWORD%,0x02
+HKLM,%ETWRegistryPath%\%ETWIclsClientRegistryKey%, "FileMax",%REG_DWORD%,0x10
+HKLM,%ETWRegistryPath%\%ETWIclsClientRegistryKey%, "FlushTimer",%REG_DWORD%,2
+HKLM,%ETWRegistryPath%\%ETWIclsClientRegistryKey%, "MaxFileSize",%REG_DWORD%,0x28
+HKLM,%ETWRegistryPath%\%ETWIclsClientRegistryKey%, "GUID",%REG_SZ%,"{b8d7e9a0-65d5-40be-afea-83593fc0164e}"
+HKLM,%ETWRegistryPath%\%ETWIclsClientRegistryKey%, "FileName",%REG_SZ%,"%ETWLogFileDirectory%\iclsClient.etl"
+HKLM,%ETWRegistryPath%\%ETWIclsClientRegistryKey%\{b8d7e9a0-65d5-40be-afea-83593fc0164e}, "Enabled", %REG_DWORD%, 1
+HKLM,%ETWRegistryPath%\%ETWIclsProxyRegistryKey%, "Start",%REG_DWORD%,1
+HKLM,%ETWRegistryPath%\%ETWIclsProxyRegistryKey%, "LogFileMode",%REG_DWORD%,0x02
+HKLM,%ETWRegistryPath%\%ETWIclsProxyRegistryKey%, "FileMax",%REG_DWORD%,0x10
+HKLM,%ETWRegistryPath%\%ETWIclsProxyRegistryKey%, "FlushTimer",%REG_DWORD%,2
+HKLM,%ETWRegistryPath%\%ETWIclsProxyRegistryKey%, "MaxFileSize",%REG_DWORD%,0x28
+HKLM,%ETWRegistryPath%\%ETWIclsProxyRegistryKey%, "GUID",%REG_SZ%,"{301b773f-50f3-4c8e-83f0-53ba9590a13e}"
+HKLM,%ETWRegistryPath%\%ETWIclsProxyRegistryKey%, "FileName",%REG_SZ%,"%ETWLogFileDirectory%\iclsProxy.etl"
+HKLM,%ETWRegistryPath%\%ETWIclsProxyRegistryKey%\{301b773f-50f3-4c8e-83f0-53ba9590a13e}, "Enabled", %REG_DWORD%, 1
+HKLM,%ETWRegistryPath%\%ETWHeciRegistryKey%, "Start",%REG_DWORD%,1
+HKLM,%ETWRegistryPath%\%ETWHeciRegistryKey%, "LogFileMode",%REG_DWORD%,0x02
+HKLM,%ETWRegistryPath%\%ETWHeciRegistryKey%, "FileMax",%REG_DWORD%,0x10
+HKLM,%ETWRegistryPath%\%ETWHeciRegistryKey%, "FlushTimer",%REG_DWORD%,2
+HKLM,%ETWRegistryPath%\%ETWHeciRegistryKey%, "MaxFileSize",%REG_DWORD%,0x28
+HKLM,%ETWRegistryPath%\%ETWHeciRegistryKey%, "GUID",%REG_SZ%,"{46d39922-a2b5-47c8-8020-8c2e35b0d5a6}"
+HKLM,%ETWRegistryPath%\%ETWHeciRegistryKey%, "FileName",%REG_SZ%,"%ETWLogFileDirectory%\SocketHeciServer.etl"
+HKLM,%ETWRegistryPath%\%ETWHeciRegistryKey%\{46d39922-a2b5-47c8-8020-8c2e35b0d5a6}, "Enabled", %REG_DWORD%, 1
+HKLM,%ETWRegistryPath%\%ETWTPMProvRegistryKey%, "Start",%REG_DWORD%,1
+HKLM,%ETWRegistryPath%\%ETWTPMProvRegistryKey%, "LogFileMode",%REG_DWORD%,0x02
+HKLM,%ETWRegistryPath%\%ETWTPMProvRegistryKey%, "FileMax",%REG_DWORD%,0x10
+HKLM,%ETWRegistryPath%\%ETWTPMProvRegistryKey%, "FlushTimer",%REG_DWORD%,2
+HKLM,%ETWRegistryPath%\%ETWTPMProvRegistryKey%, "MaxFileSize",%REG_DWORD%,0x28
+HKLM,%ETWRegistryPath%\%ETWTPMProvRegistryKey%, "GUID",%REG_SZ%,"{590de0ff-dc7d-4731-ac4f-a961af00e9da}"
+HKLM,%ETWRegistryPath%\%ETWTPMProvRegistryKey%, "FileName",%REG_SZ%,"%ETWLogFileDirectory%\TPMProvisioningService.etl"
+HKLM,%ETWRegistryPath%\%ETWTPMProvRegistryKey%\{590de0ff-dc7d-4731-ac4f-a961af00e9da}, "Enabled", %REG_DWORD%, 1
+HKLM,%ETWRegistryPath%\%ETWIPERRegistryKey%, "Start",%REG_DWORD%,1
+HKLM,%ETWRegistryPath%\%ETWIPERRegistryKey%, "LogFileMode",%REG_DWORD%,0x02
+HKLM,%ETWRegistryPath%\%ETWIPERRegistryKey%, "FileMax",%REG_DWORD%,0x10
+HKLM,%ETWRegistryPath%\%ETWIPERRegistryKey%, "FlushTimer",%REG_DWORD%,2
+HKLM,%ETWRegistryPath%\%ETWIPERRegistryKey%, "MaxFileSize",%REG_DWORD%,0x28
+HKLM,%ETWRegistryPath%\%ETWIPERRegistryKey%, "GUID",%REG_SZ%,"{f33e9e07-8792-47e8-b3fa-2c92ab32c5b3}"
+HKLM,%ETWRegistryPath%\%ETWIPERRegistryKey%, "FileName",%REG_SZ%,"%ETWLogFileDirectory%\IntelPTTEKRecertification.etl"
+HKLM,%ETWRegistryPath%\%ETWIPERRegistryKey%\{f33e9e07-8792-47e8-b3fa-2c92ab32c5b3}, "Enabled", %REG_DWORD%, 1
+HKLM,%ETWRegisteredPublishersPath%\{b8d7e9a0-65d5-40be-afea-83593fc0164e}, , %REG_SZ%, %ETWIclsClientProviderName%
+HKLM,%ETWRegisteredPublishersPath%\{301b773f-50f3-4c8e-83f0-53ba9590a13e}, , %REG_SZ%, %ETWIclsProxyProviderName%
+HKLM,%ETWRegisteredPublishersPath%\{46d39922-a2b5-47c8-8020-8c2e35b0d5a6}, , %REG_SZ%, %ETWHeciProviderName%
+HKLM,%ETWRegisteredPublishersPath%\{590de0ff-dc7d-4731-ac4f-a961af00e9da}, , %REG_SZ%, %ETWTPMProvProviderName%
+HKLM,%ETWRegisteredPublishersPath%\{f33e9e07-8792-47e8-b3fa-2c92ab32c5b3}, , %REG_SZ%, %ETWIPERProviderName%
+
+;--------- Services Section --------------------------------------------------
+
+[IclsClientInstallSection.NTx86.Services]
+AddService=,2
+AddService = %SocketHECIServiceName%, , SocketHeciServer_Install_86
+AddService = %TPMProvisioningServiceName%, , TPMProvisioningService_Install_86
+
+[IclsClientInstallSection.NTamd64.Services]
+AddService=,2
+AddService = %SocketHECIServiceName%, , SocketHeciServer_Install_64
+AddService = %TPMProvisioningServiceName%, , TPMProvisioningService_Install_64
+
+;--------- Socket Heci Server Service ----------------------------------------
+
+[SocketHeciServer_Install_86]
+DisplayName    = %SocketHECIServiceName%
+Description    = "Version: "%iCLSVersion%
+ServiceType    = 0x00000010      ; SERVICE_WIN32_OWN_PROCESS
+StartType      = 2               ; SERVICE_AUTO_START
+ErrorControl   = 0               ; SERVICE_ERROR_IGNORE
+ServiceBinary  = %13%\lib32\SocketHeciServer.exe
+Security       = "D:(A;;CCLCSWRPLO;;;WD)(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)"
+
+[SocketHeciServer_Install_64]
+DisplayName    = %SocketHECIServiceName%
+Description    = "Version: "%iCLSVersion%
+ServiceType    = 0x00000010      ; SERVICE_WIN32_OWN_PROCESS
+StartType      = 2               ; SERVICE_AUTO_START
+ErrorControl   = 0               ; SERVICE_ERROR_IGNORE
+ServiceBinary  = %13%\lib\SocketHeciServer.exe
+Security       = "D:(A;;CCLCSWRPLO;;;WD)(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)"
+
+;--------- TPM Provisioning Service ------------------------------------------
+
+[TPMProvisioningService_Install_86]
+DisplayName    = %TPMProvisioningServiceName%
+Description    = "Version: "%iCLSVersion%
+ServiceType    = 0x00000010      ; SERVICE_WIN32_OWN_PROCESS
+StartType      = 2               ; SERVICE_AUTO_START
+ErrorControl   = 0               ; SERVICE_ERROR_IGNORE
+ServiceBinary  = %13%\lib32\TPMProvisioningService.exe
+Security       = "D:(A;;CCLCSWRPLO;;;WD)(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)"
+
+[TPMProvisioningService_Install_64]
+DisplayName    = %TPMProvisioningServiceName%
+Description    = "Version: "%iCLSVersion%
+ServiceType    = 0x00000010      ; SERVICE_WIN32_OWN_PROCESS
+StartType      = 2               ; SERVICE_AUTO_START
+ErrorControl   = 0               ; SERVICE_ERROR_IGNORE
+ServiceBinary  = %13%\lib\TPMProvisioningService.exe
+Security       = "D:(A;;CCLCSWRPLO;;;WD)(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)"
+
+;--------- Files Section -----------------------------------------------------
+
+[iclsDir86]
+iclsClient.dll
+iclsClientInternal.dll
+iclsProxy.dll
+iclsProxyInternal.dll
+IntelPTTEKRecertification.exe
+SocketHeciServer.exe
+TPMProvisioningService.exe
+libcrypto-1_1.dll
+libssl-1_1.dll
+msvcp140.dll
+vcruntime140.dll
+
+[iclsDir64]
+iclsClient.dll
+iclsClientInternal.dll
+iclsProxy.dll
+iclsProxyInternal.dll
+IntelPTTEKRecertification.exe
+SocketHeciServer.exe
+TPMProvisioningService.exe
+libcrypto-1_1-x64.dll
+libssl-1_1-x64.dll
+msvcp140.dll
+vcruntime140.dll
+
+[confDir]
+cacert.pem
+epid2_paramcert.dat
+EPIDGroupCertLegacy.cer
+EPIDGroupCertX509.cer
+epid_paramcert.dat
+iclsProxy.conf
+
+[docsDir]
+development_tools.txt
+License.txt
+Readme.txt
+redist.txt
+Third Party Licenses.txt
+
+;--------- Strings Section ---------------------------------------------------
+
+[Strings]
+ManufacturerName               = "Intel"
+Location                       = "Intel(R) iCLS Client"
+iCLSVersion = "1.61.251.0"
+SocketHECIServiceName          = "Intel(R) Capability Licensing Service TCP IP Interface"
+TPMProvisioningServiceName     = "Intel(R) TPM Provisioning Service"
+ETWLogFileDirectory            = "%SystemRoot%\System32\LogFiles\WMI\Intel\iCLSClient"
+ETWRegistryPath                = "SYSTEM\CurrentControlSet\Control\WMI\Autologger"
+ETWRegisteredPublishersPath    = "SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers"
+
+ETWIclsClientProviderName      = "Intel-Autologger-iclsClient"
+ETWIclsProxyProviderName       = "Intel-Autologger-iclsProxy"
+ETWHeciProviderName            = "Intel-Autologger-SocketHeciService"
+ETWTPMProvProviderName         = "Intel-Autologger-TPMProvisioningService"
+ETWIPERProviderName            = "Intel-Autologger-PTTEKRecertification"
+
+ETWIclsClientRegistryKey       = "iclsClient"
+ETWIclsProxyRegistryKey        = "iclsProxy"
+ETWHeciRegistryKey             = "SocketHeciServer"
+ETWTPMProvRegistryKey          = "TPMProvisioningService"
+ETWIPERRegistryKey             = "IntelPTTEKRecertification"
+                               
+REG_SZ                         = 0x00000000
+REG_DWORD                      = 0x00010001

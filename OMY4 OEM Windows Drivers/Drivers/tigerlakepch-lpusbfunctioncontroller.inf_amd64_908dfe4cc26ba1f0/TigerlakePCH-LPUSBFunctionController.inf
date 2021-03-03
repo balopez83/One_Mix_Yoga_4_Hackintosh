@@ -1,0 +1,78 @@
+; ************************************************************
+; ************************************************************
+; **  Filename: TigerlakePCH-LPUSBFunctionController.inf    **
+; **  Abstract: Assigns the null driver to devices          **
+; **            for yellow-bang removal and                 **
+; **            brands Intel(R) devices                     ** 
+; ************************************************************
+; ************************************************************
+
+[Version]
+Signature=$WINDOWS NT$
+Class=USBFunctionController
+ClassGUID={BBBE8734-08FA-4966-B6A6-4E5AD010CDD7}
+Provider=%INTEL%
+CatalogFile=TigerlakePCH-LP.cat
+DriverVer=07/18/1968, 10.1.24.5
+PnpLockDown=1
+
+[SourceDisksNames]
+
+[SourceDisksFiles]
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Manufacturer]
+%INTEL%=INTEL,NTx86.6.4,NTamd64.6.4
+
+[INTEL.NTx86.6.4]
+%PCI\VEN_8086&DEV_A0EEDesc%=Needs_UfxSynopsys_D3Cold,PCI\VEN_8086&DEV_A0EE
+
+[INTEL.NTamd64.6.4]
+%PCI\VEN_8086&DEV_A0EEDesc%=Needs_UfxSynopsys_D3Cold,PCI\VEN_8086&DEV_A0EE
+
+[Needs_UfxSynopsys_D3Cold.NT]
+Include=ufxsynopsys.inf
+Needs=ufxsynopsys.Install.NT
+
+[Needs_UfxSynopsys_D3Cold.NT.HW]
+Include=ufxsynopsys.inf
+Needs=ufxsynopsys.Install.NT.HW
+Include=machine.inf
+Needs=PciD3ColdSupported.HW
+
+[Needs_UfxSynopsys_D3Cold.NT.Services]
+Include=ufxsynopsys.inf
+Needs=ufxsynopsys.Install.NT.Services
+
+[Strings]
+INTEL="INTEL"
+PCI\VEN_8086&DEV_A0EEDesc="Intel(R) USB Device Controller (OTG) (xDCI) - A0EE"
+
+
+
+
+; Copyright (c) 2003-2019 Intel Corporation
+; 
+; ********************************************************************************
+; Intel is making no claims of usability, efficacy or warranty.
+; ********************************************************************************
+; Information in this document is provided in connection with Intel products. No
+; license, express or implied, by estoppel or otherwise, to any intellectual
+; property rights is granted by this document. Intel assumes no liability
+; whatsoever, and Intel disclaims any express or implied warranty, relating to
+; sale and/or use of Intel products including liability or warranties relating to
+; fitness for a particular purpose, merchantability, or infringement of any
+; patent, copyright or other intellectual property right. Intel products are not
+; intended for use in medical, life saving, or life sustaining applications.
+; ********************************************************************************
+; Intel Corporation disclaims all warranties and liabilities for the use of this
+; document and the information contained herein, and assumes no responsibility for
+; any errors which may appear in this document, nor does Intel make a commitment
+; to update the information contained herein. Intel reserves the right to make
+; changes to this document at any time, without notice.
+; ********************************************************************************
+; ********************************************************************************
+; 
+; * Third-party brands and names are the property of their respective owners.

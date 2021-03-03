@@ -1,0 +1,59 @@
+;/*++
+;
+;Copyright (c) 2010-2020, Intel Corporation
+;
+;Abstract:
+;    Component INF file for installing Thunderbolt(TM) Toast
+;    Notification support
+;
+;--*/
+
+[Version]
+Signature = "$WINDOWS NT$"
+Class=SoftwareComponent
+ClassGuid={5c4c3332-344d-483c-8739-259e934c9cc8}
+Provider = %Intel%
+CatalogFile = TbtHostControllerToastComponent.cat
+DriverVer = 07/07/2020,1.41.987.0
+
+[Manufacturer]
+%Intel% = TbtComponentIDs,NTamd64.10.0...16299
+
+[TbtComponentIDs.NTamd64.10.0...16299]
+%TbtHostControllerToastComponent.DeviceDesc% = TbtHostControllerToastComponent_Install, SWC\PROVIDER_Intel&&COMPONENT_ThunderboltToast
+
+[DestinationDirs]
+ServiceFiles = 10
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+ThunderboltService.exe = 1,,
+TbtControlCenterToastLauncher.exe = 1,,
+
+[TbtHostControllerToastComponent_Install.NT]
+CopyFiles = ServiceFiles
+
+[ServiceFiles]
+ThunderboltService.exe
+TbtControlCenterToastLauncher.exe
+
+[TbtHostControllerToastComponent_Install.NT.Services]
+AddService = ,0x00000002,     ; NULL driver
+AddService = TbtHostControllerService, 0x00000800, ThunderboltService_ServiceInstall
+
+[ThunderboltService_ServiceInstall]
+DisplayName = %ThunderboltServiceName.SrvName%
+Description = %ThunderboltServiceName.SvcDesc%
+ServiceType    = 0x00000010
+StartType      = 2; SERVICE_AUTO_START
+ErrorControl   = 1
+ServiceBinary  = %10%\ThunderboltService.exe
+
+[Strings]
+Intel = "Intel(R) Corporation"
+DiskName = "Thunderbolt(TM) Controller Installation Disk"
+TbtHostControllerToastComponent.DeviceDesc = "Thunderbolt(TM) Toast Component"
+ThunderboltServiceName.SrvName = "Thunderbolt(TM) Application Launcher"
+ThunderboltServiceName.SvcDesc = "Launches Thunderbolt(TM) control application"
