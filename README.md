@@ -9,7 +9,22 @@ If you see anything that could be added or changed don't hesitate to make a pull
 ## *** NOTICE ***
 ### Currently the Intel 11th generation CPU and Intel 12th generation Xe GPU is not supported by macOS.
 
-##
+## One Mix Yoga 4 Specifications:
+
+|   | Standard | Platinum |
+|---|----------|----------|
+|Color| Black | Grey |
+|CPU| i5-1130G7 quad core 1.1-4 Ghz| i7-1160G7 quad core 1.2-4.4 Ghz|
+|GPU| Xe 80 EU | Xe 96 EU |
+|RAM| 8/16 GB | 16 GB |
+|SSD| 256GB/512GB/1TB NVME | 512GB/1TB NVME |
+|WiFi| Intel WiFi 6 | Intel WiFi 6 |
+|Batt| 10,000 mAH | 10,000 mAH |
+|USB| 2x Thunderbolt 4 | 2x Thunderbolt 4 |
+|   | 1x USB-C | 1x USB-C |
+
+
+
 ## Instruction Guides (Placeholder)
 
 ### [Chapter 1) Quick Start Install]
