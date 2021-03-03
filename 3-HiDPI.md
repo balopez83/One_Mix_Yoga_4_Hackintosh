@@ -1,6 +1,6 @@
-## Chapter 4) Enabling HiDPI Mode
+## Chapter 3) Enabling HiDPI Mode
 
-You can enable HiDPI mode which adds 960x600 to the list of available display resolution options.
+You can enable HiDPI mode which adds more resolution options to the list of available display resolutions.
 
 Enter the following command in terminal post-installation then reboot:
 
