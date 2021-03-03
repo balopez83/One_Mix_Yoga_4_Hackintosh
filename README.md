@@ -7,17 +7,17 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 
 ## *** NOTICE ***
-### - Currently the Intel 11th generation CPU and Intel 12th generation Xe GPU is not supported by macOS.
+### Currently the Intel 11th generation CPU and Intel 12th generation Xe GPU is not supported by macOS.
 
 ##
 ## Instruction Guides (Placeholder)
 
-### [Chapter 1) Quick Start Install](/1-quickstart.md)
-### [Chapter 2) BootCamp Install](/2-BootCamp.md)
-### [Chapter 3) Enabling HiDPI Mode](/3-HiDPI.md)
-### [Chapter 4) Additional Drivers](/4-drivers.md)
-### [Chapter 5) Booting Other OS's with OpenCore](/5-OtherOS&OC.md)
-### [Chapter 6) Other Operating Systems](/6-OtherOS.md)
+### [Chapter 1) Quick Start Install]
+### [Chapter 2) BootCamp Install]
+### [Chapter 3) Enabling HiDPI Mode]
+### [Chapter 4) Additional Drivers]
+### [Chapter 5) Booting Other OS's with OpenCore]
+### [Chapter 6) Other Operating Systems]
 
 
 ## What works 
@@ -54,4 +54,4 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 
 ## Credits
-Special thanks to my OMY4 bro [@THEDEVIOUS1](https://github.com/THEDEVIOUS1/CHUWI-MINIBOOK-HACKINTOSH) for all of his assistance and [@Lazd](https://github.com/lazd/VoodooI2CGoodix) for the touchscreen driver <br>
+Special thanks to [@THEDEVIOUS1](https://github.com/THEDEVIOUS1/CHUWI-MINIBOOK-HACKINTOSH) for all of his assistance and [@Lazd](https://github.com/lazd/VoodooI2CGoodix) for the touchscreen driver <br>
