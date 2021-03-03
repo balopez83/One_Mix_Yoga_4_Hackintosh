@@ -7,7 +7,7 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 
 ## *** NOTICE ***
-### Currently the Intel 11th generation CPU with the integrated Intel Xe GPU is not supported by macOS.
+### Currently the Intel 11th generation CPU with integrated Intel Xe GPU is not supported by macOS.
 
 ## One Mix Yoga 4 Specifications:
 
