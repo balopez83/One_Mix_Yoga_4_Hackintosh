@@ -1,0 +1,133 @@
+;=============================================================================
+;
+; Copyright (c) Intel Corporation (2017-2019).
+;
+; INTEL MAKES NO WARRANTY OF ANY KIND REGARDING THE CODE.  THIS CODE IS
+; LICENSED ON AN "AS IS" BASIS AND INTEL WILL NOT PROVIDE ANY SUPPORT,
+; ASSISTANCE, INSTALLATION, TRAINING OR OTHER SERVICES.  INTEL DOES NOT
+; PROVIDE ANY UPDATES, ENHANCEMENTS OR EXTENSIONS.  INTEL SPECIFICALLY
+; DISCLAIMS ANY WARRANTY OF MERCHANTABILITY, NONINFRINGEMENT, FITNESS FOR ANY
+; PARTICULAR PURPOSE, OR ANY OTHER WARRANTY.  Intel disclaims all liability,
+; including liability for infringement of any proprietary rights, relating to
+; use of the code. No license, express or implied, by estoppel or otherwise,
+; to any intellectual property rights is granted herein.
+;
+;=============================================================================
+
+;======================================================================
+; Installation INF for the Intel(R) Dynamic Application Loader Host Interface
+; Component INF
+;======================================================================
+
+[Version]
+Signature="$Windows NT$"
+Class=SoftwareComponent 
+ClassGuid={5c4c3332-344d-483c-8739-259e934c9cc8}
+Provider=%ManufacturerName%
+CatalogFile=DAL.cat
+DriverVer = 08/06/2020,1.38.2020.0805
+PnpLockDown=1
+
+[SourceDisksNames]
+1 = %DiskId%
+
+[SourceDisksFiles]
+JHI.dll               = 1
+JHI64.dll             = 1
+jhi_service.exe       = 1
+SpoolerApplet.dalp    = 1
+TEEManagement.dll     = 1
+TEEManagement64.dll   = 1
+
+[DestinationDirs]
+DAL.Files.13 = 13
+DAL_Files.amd64  = 11
+DAL_Files.x86  = 16425
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Intel, NTamd64.10.0
+
+[Intel.NTamd64.10.0]
+%DALDescription% = DALInstallSection.ntamd64, SWC\3C4852D6-D47B-4F46-B05E-B5EDC1AA440E
+
+[DALInstallSection.ntamd64]
+CopyFiles = DAL.Files.13
+CopyFiles = DAL_Files.x86
+CopyFiles = DAL_Files.amd64
+
+[DALInstallSection.ntamd64.Services]
+AddService = , 0x00000002
+AddService = jhi_service, %SPSVCSINST_STARTSERVICE%, DAL_Service_Inst, DalEventLog_prov_inst, Application
+
+[DALInstallSection.ntamd64.Interfaces]
+AddInterface="{3C4852D6-D47B-4F46-B05E-B5EDC1AA440E}", , DALInterfaceSection
+
+; For event logs translation
+[DALInstallSection.ntamd64.Events]
+AddEventProvider={EB9BA5A7-5E8F-4126-9A9A-E4BECBAC10F0},DalEventLog_prov_inst
+
+[DalEventLog_prov_inst]
+ProviderName=IntelDalJhi
+ResourceFile=%13%\jhi_service.exe
+MessageFile=%13%\jhi_service.exe
+Enabled=1
+
+[DALInterfaceSection]
+AddReg=DALInterfaceSection_AddReg
+
+[DALInterfaceSection_AddReg]
+HKR,,"jhi_service_path", %FLG_ADDREG_TYPE_EXPAND_SZ%, %13%
+
+; -------------- DAL driver install sections
+[DAL_Service_Inst]
+DisplayName    = "Intel(R) Dynamic Application Loader Host Interface Service"
+Description    = "Intel(R) Dynamic Application Loader Host Interface Service - Allows applications to access the local Intel (R) DAL"
+ServiceType    = 0x00000010      ; SERVICE_WIN32_OWN_PROCESS
+StartType      = 2               ; SERVICE_AUTO_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+Dependencies   = TCPIP,iphlpsvc
+Security       = "D:(A;;LCRP;;;WD)(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)"
+AddReg         = DAL_Service_AddReg
+ServiceBinary  = %13%\jhi_service.exe
+
+
+[DAL_Service_AddReg]
+; Locations
+HKR, Parameters, "FILELOCALE", %FLG_ADDREG_TYPE_EXPAND_SZ%, %13%
+HKR, Parameters, "APPLETSLOCALE", %FLG_ADDREG_TYPE_EXPAND_SZ%, %%LOCALAPPDATA%%\Intel\DAL\Applets
+
+; Delayed start
+; Disabled temporarily to work around a RS4 bug where the 'Security' definition above wasn't supported.
+;HKR, Parameters, "DelayedAutostart", %FLG_ADDREG_TYPE_DWORD%, 1
+
+; --------- Files ----------------------
+[DAL.Files.13]
+jhi_service.exe
+SpoolerApplet.dalp
+JHI.dll
+TEEManagement.dll
+JHI64.dll
+TEEManagement64.dll
+
+[DAL_Files.x86]
+JHI.dll
+TEEManagement.dll
+
+[DAL_Files.amd64]
+JHI64.dll
+TEEManagement64.dll
+
+[Strings]
+SPSVCINST_ASSOCSERVICE=0x00000002
+SPSVCSINST_STARTSERVICE=0x00000800
+FLG_ADDREG_TYPE_DWORD=0x00010001
+FLG_ADDREG_TYPE_EXPAND_SZ=0x00020000 
+FLG_ADDREG_TYPE_SZ=0x00000000 
+
+DALDescription="Intel(R) Dynamic Application Loader Host Interface"
+DiskId="Intel(R) Dynamic Application Loader Host Interface Installation Disk"
+ManufacturerName="Intel"
