@@ -1,13 +1,14 @@
 # One Mix Yoga 4 Hackintosh
 Project to implement macOS support on the One Mix Yoga 4
 
-Planned support for macOS 11 and above. 
+Initial support for macOS version 11.2.3 and above.
 
 If you see anything that could be added or changed don't hesitate to make a pull request.
 
 
 ## *** NOTICE ***
-### Currently the Intel 11th generation CPU with integrated Intel Xe GPU is not supported by macOS.
+###Initial support of macOS on the One Mix Yoga 4 has been achieved. Spoofed CPU support and no Graphics acceleration. Not for use yet as a daily driver. 
+###Currently the Intel 11th generation CPU with integrated Intel Xe GPU is not supported by macOS.
 
 ## One Mix Yoga 4 Specifications:
 
@@ -37,7 +38,11 @@ If you see anything that could be added or changed don't hesitate to make a pull
 ## What works 
 
 - Windows boot from OpenCore
-- Nothing else... Yet!
+- macOS initial support. Installer works and will boot to macOS after installed. 
+- SDcard is fully supported within macOS
+- Wi-Fi native support 
+- Fan
+- Preliminary USB support. Not mapped properly.
 
 
 ## Planned Features
@@ -45,25 +50,20 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 ## What doesn't work
 
-- macOS
-- Graphic Acceleration including 4K support
+- Graphic Acceleration including 4K support. Screen runs and is in correct orientation.
 - Bluetooth
 - Brightness
 - Audio
 - Power Management
 - Battery Indicator
-- USB-C
-- Keyboard
 - Camera
 - Sleep / Wake
 - TrackPad
 - Thunderbolt
 - TouchScreen / Stylus
-- Intel Wi-Fi 
 - FileVault
 - Recovery
 - Fingerprint Sensor
-- Card Reader
 - Accelerometer
 
 
