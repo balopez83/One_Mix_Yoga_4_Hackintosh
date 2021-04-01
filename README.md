@@ -7,8 +7,8 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 
 ## *** NOTICE ***
-###Initial support of macOS on the One Mix Yoga 4 has been achieved. Spoofed CPU support and no Graphics acceleration. Not for use yet as a daily driver. 
-###Currently the Intel 11th generation CPU with integrated Intel Xe GPU is not supported by macOS.
+### Initial support of macOS on the One Mix Yoga 4 has been achieved. Spoofed CPU support and no Graphics acceleration. Not for use yet as a daily driver. 
+### Currently the Intel 11th generation CPU with integrated Intel Xe GPU is not supported by macOS.
 
 ## One Mix Yoga 4 Specifications:
 
