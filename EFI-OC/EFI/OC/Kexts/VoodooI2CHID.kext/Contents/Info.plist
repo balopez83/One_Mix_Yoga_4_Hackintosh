@@ -356,22 +356,6 @@
 			<key>IOProviderClass</key>
 			<string>IOHIDInterface</string>
 		</dict>
-		<key>VoodooI2CHIDSYNA3602Device</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.alexandred.VoodooI2CHID</string>
-			<key>IOClass</key>
-			<string>VoodooI2CHIDSYNA3602Device</string>
-			<key>IOProbeScore</key>
-			<integer>200</integer>
-			<key>IOPropertyMatch</key>
-			<dict>
-				<key>name</key>
-				<string>SYNA3602</string>
-			</dict>
-			<key>IOProviderClass</key>
-			<string>VoodooI2CDeviceNub</string>
-		</dict>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.11</string>
