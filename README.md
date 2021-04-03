@@ -38,7 +38,6 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 ## What works 
 
-- Windows boot from OpenCore
 - macOS initial support. Installer works and will boot to macOS after installed. 
 - SDcard is fully supported within macOS
 - Wi-Fi native support (currently unreliable)
@@ -55,6 +54,7 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 ## What doesn't work
 
+- Windows boot from OpenCore
 - Graphic Acceleration including 4K support. Screen runs and is in correct orientation.
 - Bluetooth
 - Brightness
