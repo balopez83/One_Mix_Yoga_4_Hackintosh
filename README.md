@@ -60,7 +60,6 @@ If you see anything that could be added or changed don't hesitate to make a pull
 - Brightness
 - Audio
 - Power Management
-- Camera
 - Sleep / Wake
 - Thunderbolt
 - FileVault
