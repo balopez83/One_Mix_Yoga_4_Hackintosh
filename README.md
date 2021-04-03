@@ -40,9 +40,13 @@ If you see anything that could be added or changed don't hesitate to make a pull
 - Windows boot from OpenCore
 - macOS initial support. Installer works and will boot to macOS after installed. 
 - SDcard is fully supported within macOS
-- Wi-Fi native support 
+- Wi-Fi native support (currently unreliable)
 - Fan
-- Preliminary USB support. Not mapped properly.
+- USB
+- Preliminary HIDPI support without Graphics Acceleration
+- Battery
+- Trackpad
+- TouchScreen / Stylus
 
 
 ## Planned Features
@@ -55,12 +59,9 @@ If you see anything that could be added or changed don't hesitate to make a pull
 - Brightness
 - Audio
 - Power Management
-- Battery Indicator
 - Camera
 - Sleep / Wake
-- TrackPad
 - Thunderbolt
-- TouchScreen / Stylus
 - FileVault
 - Recovery
 - Fingerprint Sensor
@@ -68,4 +69,4 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 
 ## Credits
-Special thanks to [@THEDEVIOUS1](https://github.com/THEDEVIOUS1/CHUWI-MINIBOOK-HACKINTOSH) for all of his assistance and [@Lazd](https://github.com/lazd/VoodooI2CGoodix) for the touchscreen driver <br>
+Special thanks to [@THEDEVIOUS1](https://github.com/THEDEVIOUS1/CHUWI-MINIBOOK-HACKINTOSH) for all of his assistance <br>
