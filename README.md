@@ -7,8 +7,9 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 
 ## *** NOTICE ***
-### Initial support of macOS on the One Mix Yoga 4 has been achieved. Spoofed CPU support and no Graphics acceleration. Not for use yet as a daily driver. 
+### Initial support of macOS on the One Mix Yoga 4 has been achieved. Not for use yet as a daily driver. 
 ### Currently the Intel 11th generation CPU with integrated Intel Xe GPU is not supported by macOS.
+### Do not update kexts manually, instead wait for us to update. Kexts have been modified to support the currently unsupported 11th gen chipset. Once 11th gen devices are supported natively we will remove this restriction.
 
 ## One Mix Yoga 4 Specifications:
 
@@ -37,12 +38,15 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 ## What works 
 
-- Windows boot from OpenCore
 - macOS initial support. Installer works and will boot to macOS after installed. 
 - SDcard is fully supported within macOS
-- Wi-Fi native support 
+- Wi-Fi native support (currently unreliable)
 - Fan
-- Preliminary USB support. Not mapped properly.
+- USB
+- Preliminary HIDPI support without Graphics Acceleration
+- Battery
+- Trackpad
+- TouchScreen / Stylus
 
 
 ## Planned Features
@@ -50,17 +54,14 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 ## What doesn't work
 
+- Windows boot from OpenCore
 - Graphic Acceleration including 4K support. Screen runs and is in correct orientation.
 - Bluetooth
 - Brightness
 - Audio
 - Power Management
-- Battery Indicator
-- Camera
 - Sleep / Wake
-- TrackPad
 - Thunderbolt
-- TouchScreen / Stylus
 - FileVault
 - Recovery
 - Fingerprint Sensor
@@ -68,4 +69,4 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 
 ## Credits
-Special thanks to [@THEDEVIOUS1](https://github.com/THEDEVIOUS1/CHUWI-MINIBOOK-HACKINTOSH) for all of his assistance and [@Lazd](https://github.com/lazd/VoodooI2CGoodix) for the touchscreen driver <br>
+Special thanks to [@THEDEVIOUS1](https://github.com/THEDEVIOUS1/CHUWI-MINIBOOK-HACKINTOSH) for all of his assistance <br>
