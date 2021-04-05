@@ -9,7 +9,7 @@ If you see anything that could be added or changed don't hesitate to make a pull
 ## *** NOTICE ***
 ### Initial support of macOS on the One Mix Yoga 4 has been achieved. Not for use yet as a daily driver. 
 ### Currently the Intel 11th generation CPU with integrated Intel Xe GPU is not supported by macOS.
-### Do not update kexts manually, instead wait for us to update. Kexts have been modified to support the currently unsupported 11th gen chipset. Once 11th gen devices are supported natively we will remove this restriction.
+### Do not update kexts labeled as "custom" manually, instead wait for us to update. Kexts have been modified to support the currently unsupported 11th gen chipset. Once 11th gen devices are supported natively we will remove this restriction.
 
 ## One Mix Yoga 4 Specifications:
 
@@ -47,6 +47,7 @@ If you see anything that could be added or changed don't hesitate to make a pull
 - Battery
 - Trackpad
 - TouchScreen / Stylus
+- Windows Boot Support From OpenCore Bootloader
 
 
 ## Planned Features
@@ -54,7 +55,6 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 ## What doesn't work
 
-- Windows boot from OpenCore
 - Graphic Acceleration including 4K support. Screen runs and is in correct orientation.
 - Bluetooth
 - Brightness
