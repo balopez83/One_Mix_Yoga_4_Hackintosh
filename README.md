@@ -30,7 +30,7 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 ### [Chapter 1) Quick Start Install]
 ### [Chapter 2) BootCamp Install]
-### [Chapter 3) Enabling HiDPI Mode]
+### [Chapter 3) Quirks & Fixes]
 ### [Chapter 4) Additional Drivers]
 ### [Chapter 5) Booting Other OS's with OpenCore]
 ### [Chapter 6) Other Operating Systems]
@@ -47,7 +47,9 @@ If you see anything that could be added or changed don't hesitate to make a pull
 - Battery
 - Trackpad
 - TouchScreen / Stylus
+- Keyboard Shut-off in tablet mode
 - Windows Boot Support From OpenCore Bootloader
+- Audio
 
 
 ## Planned Features
@@ -58,7 +60,6 @@ If you see anything that could be added or changed don't hesitate to make a pull
 - Graphic Acceleration including 4K support. Screen runs and is in correct orientation.
 - Bluetooth
 - Brightness
-- Audio
 - Power Management
 - Sleep / Wake
 - Thunderbolt
