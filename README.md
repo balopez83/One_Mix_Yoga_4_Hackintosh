@@ -1,4 +1,4 @@
-# One Mix Yoga 4 Hackintosh
+# One Mix Yoga 4 (One Mix 4) Hackintosh
 Project to implement macOS support on the One Mix Yoga 4
 
 Initial support for macOS version 11.2.3 and above.
