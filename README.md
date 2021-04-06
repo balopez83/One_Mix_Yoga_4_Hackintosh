@@ -50,6 +50,8 @@ If you see anything that could be added or changed don't hesitate to make a pull
 - Keyboard Shut-off in tablet mode
 - Windows Boot Support From OpenCore Bootloader
 - Audio
+- Recovery
+- FileVault
 
 
 ## Planned Features
@@ -63,8 +65,6 @@ If you see anything that could be added or changed don't hesitate to make a pull
 - Power Management
 - Sleep / Wake
 - Thunderbolt
-- FileVault
-- Recovery
 - Fingerprint Sensor
 - Accelerometer
 
