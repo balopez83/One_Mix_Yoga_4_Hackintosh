@@ -26,7 +26,7 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 
 
-## Instruction Guides (Placeholder)
+## Instruction Guides
 
 ### [Chapter 1) Quick Start Install](https://github.com/balopez83/One_Mix_Yoga_4_Hackintosh/blob/main/1-QuickStart.md)
 ### [Chapter 2) BootCamp Install](https://github.com/balopez83/One_Mix_Yoga_4_Hackintosh/blob/main/2-BootCamp.md)
@@ -38,9 +38,9 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 ## What works 
 
-- macOS initial support. Installer works and will boot to macOS after installed. 
+- macOS
 - SDcard is fully supported within macOS
-- Wi-Fi native support (currently unreliable)
+- Wi-Fi native Intel support
 - Fan
 - USB
 - Preliminary HIDPI support without Graphics Acceleration
