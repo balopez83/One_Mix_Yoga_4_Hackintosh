@@ -16,3 +16,10 @@ Enter the following command in terminal post-installation then reboot:
 ```
 sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayResolutionEnabled -bool true
 ```
+
+
+3. The trackpad is very sensitive. Additionally, macOS sets "Force Click and Haptic Feedback" enabled which causes unexpected behavior when clicking on the trackpad. You will need to turn off this function in order to have a trackpad that operates as expected. You can turn it off by going to:
+``` 
+System Preferences > Trackpad > Uncheck Force Click and Haptic Feedback
+```
+
