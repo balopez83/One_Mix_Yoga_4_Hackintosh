@@ -28,7 +28,7 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 ## Instruction Guides (Placeholder)
 
-### [Chapter 1) Quick Start Install]
+### [Chapter 1) Quick Start Install](https://github.com/balopez83/One_Mix_Yoga_4_Hackintosh/blob/main/1-QuickStart.md)
 ### [Chapter 2) BootCamp Install]
 ### [Chapter 3) Quirks & Fixes]
 ### [Chapter 4) Additional Drivers]
