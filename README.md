@@ -59,7 +59,7 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 ## What doesn't work
 
-- Graphic Acceleration including 4K support. Screen runs and is in correct orientation.
+- Graphic Acceleration including 4K support.
 - Audio: Built-in Microphone
 - Brightness
 - Power Management
