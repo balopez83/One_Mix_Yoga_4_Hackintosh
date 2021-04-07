@@ -1,4 +1,4 @@
-# One Mix Yoga 4 Hackintosh
+# One Mix Yoga 4 (One Mix 4) Hackintosh
 Project to implement macOS support on the One Mix Yoga 4
 
 Initial support for macOS version 11.2.3 and above.
@@ -49,7 +49,7 @@ If you see anything that could be added or changed don't hesitate to make a pull
 - TouchScreen / Stylus
 - Keyboard Shut-off in tablet mode
 - Windows Boot Support From OpenCore Bootloader
-- Audio
+- Audio: Built-in & Headphone Jack
 - Recovery
 - FileVault
 
@@ -61,10 +61,11 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 - Graphic Acceleration including 4K support. Screen runs and is in correct orientation.
 - Bluetooth
+- Audio: Built-in Microphone
 - Brightness
 - Power Management
 - Sleep / Wake
-- Thunderbolt
+- Thunderbolt: Video currently unsupported, Audio Untested
 - Fingerprint Sensor
 - Accelerometer
 
