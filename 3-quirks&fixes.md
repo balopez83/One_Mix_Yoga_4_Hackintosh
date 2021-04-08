@@ -23,3 +23,20 @@ sudo defaults write /Library/Preferences/com.apple.windowserver.plist DisplayRes
 System Preferences > Trackpad > Uncheck Force Click and Haptic Feedback
 ```
 
+
+4. Due to the erratic nature of the trackpad currently you may want to try some of the Terminal commands and see if this helps. The commands below may not be needed in furture EFI releases but will be retained here for reference.
+```
+sudo defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool false
+sudo defaults write com.apple.AppleMultitouchTrackpad ForceSuppressed -bool true
+sudo defaults write com.apple.AppleMultitouchTrackpad ActuateDetents -bool false
+
+sudo defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true 
+sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true 
+sudo defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1 
+sudo defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+sudo defaults write com.apple.AppleMultitouchTrackpad Dragging -bool true 
+sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -bool true
+```
+Once entering any or all of the commands above, reboot your computer for the changes to take effect.
+
