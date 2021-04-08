@@ -24,7 +24,7 @@ System Preferences > Trackpad > Uncheck Force Click and Haptic Feedback
 ```
 
 
-4. Due to the erratic nature of the trackpad currently you may want to try some of the Terminal commands and see if this helps. The commands below may not be needed in furture EFI releases but will be retained here for reference.
+4. Due to the erratic nature of the trackpad currently you may want to try some of the following Terminal commands and see if it helps. The commands below may not be needed in furture EFI releases but will be retained here for reference.
 ```
 sudo defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool false
 sudo defaults write com.apple.AppleMultitouchTrackpad ForceSuppressed -bool true
