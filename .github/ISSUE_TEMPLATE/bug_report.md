@@ -30,10 +30,8 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. 11.1.0]
- - Release Version [e.g. 1.0.1]
-
+**Required Files**
+Provide your troubleshooting files. Unless you are unable due to the issue, you should provide a copy of any modified DSDT or SSDT related to the issue, iOReg dump, Log dump, and any other related files or information related to the issue. If sending your entire EFI DO NOT include any themes or resources folders. 
 
 **Additional context**
 Add any other context about the problem here.
