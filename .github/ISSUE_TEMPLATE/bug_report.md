@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Prerequisites** ( enter an X or x between the [ ] like this [X] )
-- [ ] Using a supported OS version 10.15.7
+- [ ] Using a supported OS version 10.15.7 or higher
 - [ ] Cleared NVRAM
 - [ ] Followed all installation steps
 - [ ] Reviewed existing issues to see if your issue has already been resolved
