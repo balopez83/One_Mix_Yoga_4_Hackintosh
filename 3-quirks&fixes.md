@@ -40,3 +40,14 @@ sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging 
 ```
 Once entering any or all of the commands above, reboot your computer for the changes to take effect.
 
+
+5. Without Graphics Acceleration macOS can be very slow and in some cases may appear to freeze. The scripts below will allow you to reduce animations that will slow down and freeze your computer. If Graphics Acceleration is achieved you will want to use the second script to re-enable all animations. 
+([Credit Barrykn](https://github.com/barrykn/big-sur-micropatcher) and johncaling40 for the scripts and other unknown contributors for the excellent work they have done to keep older macs and our One Mix Yoga 4 running as well as possible)
+
+How to use: Open Terminal and type in ```chmod +x``` and then drag and drop the script(s) below. Hit enter and enter your password if asked. After hitting enter drag and drop the scrip you would like to run and hit enter. If asked enter your password again and then reboot.
+
+[Disable Animation](https://github.com/balopez83/One_Mix_Yoga_4_Hackintosh/blob/main/disable-animations.sh)
+
+[Enable Animtion](https://github.com/balopez83/One_Mix_Yoga_4_Hackintosh/blob/main/reenable-animations.sh)
+
+In addition to the scripts you can also 'Reduce Motion' & 'Reduce Transparency' to further speed things up. Go to 'System Preferences' > 'Accessibility' > 'Display' to make these additional changes. 
