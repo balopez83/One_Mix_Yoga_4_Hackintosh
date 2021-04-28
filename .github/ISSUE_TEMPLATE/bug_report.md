@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Prerequisites** (enter an X between the [ ] )
+**Prerequisites** ( enter an X or x between the [ ] like this [X] )
 - [ ] Using a supported OS version 10.15.7
 - [ ] Cleared NVRAM
 - [ ] Followed all installation steps
