@@ -2,17 +2,17 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: ''
+labels: bug, question
 assignees: ''
 
 ---
 
 **Prerequisites**
-[ ] Using a supported OS version 10.15.7
-[ ] Cleared NVRAM
-[ ] Followed all installation steps
-[ ] Reviewed existing issues to see if your issue has already been resolved
-[ ] Confirmed your fix is not contained within quirks & fixes instructions.
+- [ ] Using a supported OS version 10.15.7
+- [ ] Cleared NVRAM
+- [ ] Followed all installation steps
+- [ ] Reviewed existing issues to see if your issue has already been resolved
+- [ ] Confirmed your fix is not contained within quirks & fixes instructions.
 
 **Describe the bug**
 A clear and concise description of what the bug is.
