@@ -1,7 +1,7 @@
 # One Mix Yoga 4 (One Mix 4) Hackintosh
 Project to implement macOS support on the One Mix Yoga 4
 
-Initial support for macOS version 11.2.3 and above.
+Initial support for macOS version 10.15.7 and above.
 
 If you see anything that could be added or changed don't hesitate to make a pull request.
 
@@ -39,7 +39,7 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 ## What works 
 
-- macOS
+- macOS 10.15.7 and above
 - SDcard is fully supported within macOS
 - Wi-Fi native Intel support
 - Fan
