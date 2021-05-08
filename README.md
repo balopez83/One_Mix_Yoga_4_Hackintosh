@@ -54,6 +54,7 @@ If you see anything that could be added or changed don't hesitate to make a pull
 - Recovery
 - FileVault
 - Bluetooth
+- Brightness Keys (This won't actually work until GPU Acceleration is achieved)
 
 
 
@@ -61,7 +62,7 @@ If you see anything that could be added or changed don't hesitate to make a pull
 
 - Graphic Acceleration including 4K support.
 - Audio: Built-in Microphone
-- Brightness
+- Brightness Adjustment
 - Power Management
 - Sleep / Wake
 - Thunderbolt: Video currently unsupported, Audio Untested
