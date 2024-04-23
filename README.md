@@ -1,4 +1,7 @@
 # One Mix Yoga 4 (One Mix 4) Hackintosh
+## End Of Life STATUS - At this stage it is clear there will be no Intel Xe GPU support unless someone is able to create drivers. 
+## Because this computer does not have proper graphics support I will only update when I am able to either fix an issue, add a feature, or if someone develops a graphics driver. 
+
 Project to implement macOS support on the One Mix Yoga 4
 
 Initial support for macOS version 10.15.7 and above.
