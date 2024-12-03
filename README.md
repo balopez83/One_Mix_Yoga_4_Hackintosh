@@ -1,7 +1,7 @@
 # One Mix Yoga 4 (One Mix 4) Hackintosh
 Project to implement macOS support on the One Mix Yoga 4
 
-## Ending Active Support - Due to lack of graphics support and no future support anticipated I will no longer be actively maintaining this repo. I will periodically update the EFI if I am able to add a feature, fix a bug, or if in the unlikely chance someone develops a graphics kext adding support for the Intel Xe Graphics chipset. 
+## Ending Active Support and Archiving - Due to lack of graphics support and none anticipated in the future, I will no longer be actively maintaining this repo. In the unlikely chance someone develops a graphics kext adding support for the Intel Xe Graphics chipset I may unarchive and reinstate support. 
 
 Initial support for macOS version 10.15.7 and above.
 
